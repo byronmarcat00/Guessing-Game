@@ -13,7 +13,7 @@ let fourthTrial = document.querySelector("#fourth_trial");
 let fifthTrial = document.querySelector("#fifth_trial");
 
 let random_number = Math.floor(Math.random() * 100) + 1;
-let counter = 6;
+let counter = 5;
 
 function guesslocation() {
   let diff = random_number - parseInt(inputGuess.value);
@@ -67,7 +67,7 @@ function guessGame() {
     numbersguessed();
     guesslocation();
     counter--;
-    if (counter == 0) {
+    if (counter === 0) {
       return (title.textContent = `You lose.The winning number was ${random_number}`);
     }
   }
@@ -95,5 +95,11 @@ function resetGame(){
 }
 
 startGameButton.addEventListener("click", guessGame);
+inputGuess.addEventListener("keydown",function(event){
+    if(event.code === "Enter"){
+        guessGame();
+    }
 
+})
 resetButton.addEventListener("click",resetGame)
+
