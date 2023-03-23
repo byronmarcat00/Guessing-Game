@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Guessing-Game</title>
+  </head>
+  <body>
+    <section class="guessing-game-container">
+      <h1 id="title">The Guessing Game</h1>
+
+      <h2 id="sub-title">Guess a number between 1-100</h2>
+
+      <div>
+        <input type="text" id="input_guess" placeholder="TYPE GUESS HERE " />
+        <button id="go">GO!</button>
+      </div>
+      <div id="numbers-guessed">
+        <span class="container" id="first_trial">5</span>
+        <span class="container" id="second_trial">4</span>
+        <span class="container"id="third_trial"> 3</span>
+        <span class="container"id="fourth_trial">2</span>
+        <span class="container" id="fifth_trial">1</span>
+      </div>
+
+      <button id="reset-button">Reset the Game</button>
+      <button id="hint-button">Need a Hint?</button>
+    </section>
+
+    <script src="index.js"></script>
+  </body>
+</html>
